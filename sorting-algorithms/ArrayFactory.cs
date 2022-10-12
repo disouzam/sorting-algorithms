@@ -1,6 +1,6 @@
 ﻿namespace sorting_algorithms
 {
-    internal class ArrayFactory
+    public class ArrayFactory
     {
         public static int[] GetRandomArray(int size)
         {

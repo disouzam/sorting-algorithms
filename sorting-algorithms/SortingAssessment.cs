@@ -1,6 +1,6 @@
 ﻿namespace sorting_algorithms
 {
-    internal class SortingAssessment
+    public class SortingAssessment
     {
         public static bool IsSorted(int[] array)
         {
