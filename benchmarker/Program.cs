@@ -1,10 +1,12 @@
-﻿namespace benchmarker
+﻿using BenchmarkDotNet.Running;
+
+namespace benchmarker
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            var results = BenchmarkRunner.Run<Setup>();
         }
     }
 }
