@@ -1,4 +1,6 @@
-﻿namespace sorting_algorithms
+﻿using System;
+
+namespace sorting_algorithms
 {
     internal class Program
     {
