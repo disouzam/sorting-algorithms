@@ -5,7 +5,9 @@ VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "console-app", "console-app\console-app.csproj", "{7780B942-1E43-4626-A43D-1E5F74A7FA6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sorting-algorithms", "sorting-algorithms\sorting-algorithms.csproj", "{7B904133-DCF7-4B5C-BD47-8D94EF6DC679}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sorting-algorithms", "sorting-algorithms\sorting-algorithms.csproj", "{7B904133-DCF7-4B5C-BD47-8D94EF6DC679}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "benchmarker", "benchmarker\benchmarker.csproj", "{0ED5365E-899A-472E-ADEF-300010520FE4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{7B904133-DCF7-4B5C-BD47-8D94EF6DC679}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B904133-DCF7-4B5C-BD47-8D94EF6DC679}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B904133-DCF7-4B5C-BD47-8D94EF6DC679}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0ED5365E-899A-472E-ADEF-300010520FE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ED5365E-899A-472E-ADEF-300010520FE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ED5365E-899A-472E-ADEF-300010520FE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ED5365E-899A-472E-ADEF-300010520FE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
