@@ -1,6 +1,6 @@
 ﻿namespace sorting_algorithms
 {
-    internal class QuickSort
+    public class QuickSort
     {
         public static void Sort1(int[] array)
         {

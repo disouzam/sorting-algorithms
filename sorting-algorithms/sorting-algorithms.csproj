@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
-    <RootNamespace>sorting_algorithms_lib</RootNamespace>
-    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>sorting_algorithms</RootNamespace>
+    <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 

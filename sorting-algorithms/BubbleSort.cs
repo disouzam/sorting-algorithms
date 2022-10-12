@@ -1,6 +1,6 @@
 ﻿namespace sorting_algorithms
 {
-    internal class BubbleSort
+    public class BubbleSort
     {
         public static void Sort1(int[] array)
         {

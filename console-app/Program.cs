@@ -1,6 +1,7 @@
 using System;
+using sorting_algorithms;
 
-namespace sorting_algorithms
+namespace consoleapp
 {
     internal static class Program
     {
