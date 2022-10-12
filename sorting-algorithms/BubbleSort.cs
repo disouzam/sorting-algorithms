@@ -6,7 +6,7 @@
         {
             for (var i = 0; i < array.Length; i++)
             {
-                for (var j = 0; j < array.Length; j++)
+                for (var j = 0; j < array.Length - 1; j++)
                 {
                     if (array[j] > array[j+1])
                     {
