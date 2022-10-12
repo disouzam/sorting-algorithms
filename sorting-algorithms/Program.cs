@@ -7,6 +7,12 @@ namespace sorting_algorithms
         static void Main(string[] args)
         {
             Console.WriteLine("Demonstration of sorting algorithms.");
+
+            var randomGenerator = new System.Random();
+
+            var testArray = ArrayFactory.GetRandomArray(randomGenerator.Next());
+
+            BubbleSort.Sort(testArray);
         }
     }
 }
