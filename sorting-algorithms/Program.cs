@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace sorting_algorithms
 {
@@ -10,11 +10,19 @@ namespace sorting_algorithms
 
             var randomGenerator = new System.Random();
 
-            var testArray = ArrayFactory.GetRandomArray(randomGenerator.Next());
+            BubbleSort.Sort1(testArray);
 
-            BubbleSort.Sort(testArray);
+            Console.WriteLine($"Is {nameof(testArray)} sorted by {nameof(BubbleSort)}.{nameof(BubbleSort.Sort1)}?");
+            Console.WriteLine(SortingAssessment.IsSorted(testArray));
 
-            Console.WriteLine($"Is {nameof(testArray)} sorted by {nameof(BubbleSort)}?");
+            BubbleSort.Sort2(testArray);
+
+            Console.WriteLine($"Is {nameof(testArray)} sorted by {nameof(BubbleSort)}.{nameof(BubbleSort.Sort2)}?");
+            Console.WriteLine(SortingAssessment.IsSorted(testArray));
+
+            BubbleSort.Sort3(testArray);
+
+            Console.WriteLine($"Is {nameof(testArray)} sorted by {nameof(BubbleSort)}.{nameof(BubbleSort.Sort3)}?");
             Console.WriteLine(SortingAssessment.IsSorted(testArray));
         }
     }
