@@ -13,6 +13,9 @@ namespace sorting_algorithms
             var testArray = ArrayFactory.GetRandomArray(randomGenerator.Next());
 
             BubbleSort.Sort(testArray);
+
+            Console.WriteLine($"Is {nameof(testArray)} sorted by {nameof(BubbleSort)}?");
+            Console.WriteLine(SortingAssessment.IsSorted(testArray));
         }
     }
 }
