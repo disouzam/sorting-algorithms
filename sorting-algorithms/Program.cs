@@ -2,7 +2,7 @@ using System;
 
 namespace sorting_algorithms
 {
-    internal class Program
+    internal static class Program
     {
         static void Main(string[] args)
         {
