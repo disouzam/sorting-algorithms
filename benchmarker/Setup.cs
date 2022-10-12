@@ -7,13 +7,14 @@ namespace benchmarker
     [MemoryDiagnoser]
     public class Setup
     {
-        public int[] GetSampleArray()
+        protected Setup()
         {
-            var seed = 10;
-            var size = 1000;
-            var testArray = ArrayFactory.GetRandomArray(size, seed);
 
-            return testArray;
+        }
+
+        public static int[] GetSampleArray()
+        {
+            return ArraySamples.GetSample1();
         }
 
         [Benchmark(Baseline = true)]
