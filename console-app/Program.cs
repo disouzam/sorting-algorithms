@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.IO;
 using System.Text;
 
@@ -15,8 +15,9 @@ namespace consoleapp
             var randomGenerator = new System.Random();
 
             //var testArray = ArrayFactory.GetRandomArray(randomGenerator.Next());
-            var testArray = ArrayFactory.GetRandomArray(1000, 10);
+            var testArray = ArrayFactory.GetRandomArray(1000000, null);
             PrintArray(testArray);
+
             BubbleSort.Sort1(testArray);
 
             Console.WriteLine($"Is {nameof(testArray)} sorted by {nameof(BubbleSort)}.{nameof(BubbleSort.Sort1)}?");
