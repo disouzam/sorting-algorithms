@@ -1,4 +1,4 @@
-﻿namespace sorting_algorithms
+namespace sorting_algorithms
 {
     public class BubbleSort
     {
@@ -45,7 +45,7 @@
                     }
                 }
 
-                if (changes > 0)
+                if (changes == 0)
                 {
                     break;
                 }
