@@ -2,6 +2,8 @@
 using System.IO;
 using System.Text;
 
+using Microsoft.VisualBasic;
+
 using sorting_algorithms;
 
 namespace consoleapp
@@ -11,32 +13,60 @@ namespace consoleapp
         static void Main(string[] args)
         {
             Console.WriteLine("Demonstration of sorting algorithms.");
-
+            long startTime;
+            long endTime;
+            int arraySize = 1000000;
             var randomGenerator = new System.Random();
+            var seed = randomGenerator.Next(arraySize);
 
-            //var testArray = ArrayFactory.GetRandomArray(randomGenerator.Next());
-            var testArray = ArrayFactory.GetRandomArray(1000000, null);
-            PrintArray(testArray);
+            int[] testArray;
 
+            // BubbleSort > Sort 1
+            testArray = ArrayFactory.GetRandomArray(arraySize, seed);
+            startTime = DateTime.Now.Ticks;
             BubbleSort.Sort1(testArray);
+            endTime = DateTime.Now.Ticks;
+
+            Console.WriteLine($"{nameof(BubbleSort)}.{nameof(BubbleSort.Sort1)} took {TimeSpan.FromTicks(endTime-startTime).TotalSeconds} to sort an array with {arraySize} elements.");
+            PrintArray(testArray);
 
             Console.WriteLine($"Is {nameof(testArray)} sorted by {nameof(BubbleSort)}.{nameof(BubbleSort.Sort1)}?");
             Console.WriteLine(SortingAssessment.IsSorted(testArray));
             Console.WriteLine();
 
+            // BubbleSort > Sort 2
+            testArray = ArrayFactory.GetRandomArray(arraySize, seed);
+            startTime = DateTime.Now.Ticks;
             BubbleSort.Sort2(testArray);
+            endTime = DateTime.Now.Ticks;
+
+            Console.WriteLine($"{nameof(BubbleSort)}.{nameof(BubbleSort.Sort2)} took {TimeSpan.FromTicks(endTime-startTime).TotalSeconds} to sort an array with {arraySize} elements.");
+            PrintArray(testArray);
 
             Console.WriteLine($"Is {nameof(testArray)} sorted by {nameof(BubbleSort)}.{nameof(BubbleSort.Sort2)}?");
             Console.WriteLine(SortingAssessment.IsSorted(testArray));
             Console.WriteLine();
 
+            // BubbleSort > Sort 3
+            testArray = ArrayFactory.GetRandomArray(arraySize, seed);
+            startTime = DateTime.Now.Ticks;
             BubbleSort.Sort3(testArray);
+            endTime = DateTime.Now.Ticks;
+
+            Console.WriteLine($"{nameof(BubbleSort)}.{nameof(BubbleSort.Sort3)} took {TimeSpan.FromTicks(endTime-startTime).TotalSeconds} to sort an array with {arraySize} elements.");
+            PrintArray(testArray);
 
             Console.WriteLine($"Is {nameof(testArray)} sorted by {nameof(BubbleSort)}.{nameof(BubbleSort.Sort3)}?");
             Console.WriteLine(SortingAssessment.IsSorted(testArray));
             Console.WriteLine();
 
+            testArray = ArrayFactory.GetRandomArray(arraySize, seed);
+            startTime = DateTime.Now.Ticks;
             QuickSort.Sort1(testArray);
+            endTime = DateTime.Now.Ticks;
+
+            Console.WriteLine($"{nameof(QuickSort)}.{nameof(QuickSort.Sort1)} took {TimeSpan.FromTicks(endTime-startTime).TotalSeconds} to sort an array with {arraySize} elements.");
+            PrintArray(testArray);
 
             Console.WriteLine($"Is {nameof(testArray)} sorted by {nameof(QuickSort)}.{nameof(QuickSort.Sort1)}?");
             Console.WriteLine(SortingAssessment.IsSorted(testArray));
@@ -46,12 +76,17 @@ namespace consoleapp
 
         internal static void PrintArray(int[] array)
         {
-            var filePath = $"{Directory.GetCurrentDirectory()}\\arrayValue.txt";
+            var year = DateAndTime.Now.Year;
+            var month = DateAndTime.Now.Month;
+            var day = DateAndTime.Now.Day;
+            var hour = DateAndTime.Now.Hour;
+            var minute = DateAndTime.Now.Minute;
+            var second = DateAndTime.Now.Second;
+            var filePath = $"{Directory.GetCurrentDirectory()}\\arrayValue-{year}-{month}-{day}-{hour}-{minute}-{second}.txt";
 
             var stringBuilder = new StringBuilder();
 
-            stringBuilder.Append("[");
-
+            stringBuilder.Append("{");
 
             for (var i = 0; i < array.Length; i++)
             {
@@ -63,7 +98,7 @@ namespace consoleapp
                 }
             }
 
-            stringBuilder.Append("]");
+            stringBuilder.Append("}");
 
             File.WriteAllText(filePath, stringBuilder.ToString());
         }
