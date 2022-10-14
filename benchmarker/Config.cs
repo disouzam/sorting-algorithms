@@ -13,8 +13,17 @@ namespace benchmarker
         {
             AddJob(new Job("SortingBenchmarkJob", BenchmarkDotNet.Jobs.RunMode.Default)
             {
-                Run = { LaunchCount = 5, IterationTime = TimeInterval.Millisecond * 200 },
-                Accuracy = { MaxRelativeError = 0.01 }
+                Run =
+                {
+                    MinWarmupIterationCount = 10,
+                    LaunchCount = 5, 
+                    IterationTime = TimeInterval.Millisecond * 1000
+                },
+                Accuracy =
+                {
+                    MaxRelativeError = 0.001,
+                    MinInvokeCount = 5
+                },
             });
             AddDiagnoser(MemoryDiagnoser.Default);
             AddExporter(RPlotExporter.Default);

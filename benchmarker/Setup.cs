@@ -11,7 +11,7 @@ namespace benchmarker
 
         //[Params(1, 10, 100, 1000, 10000, 100000, 1000000)]
         //[Params(1, 10, 100)]
-        [Params(10)]
+        [Params(1000)]
         public int ArraySize { get; set; }
 
         [IterationSetup]
