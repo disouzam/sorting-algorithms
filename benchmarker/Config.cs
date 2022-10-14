@@ -15,16 +15,15 @@ namespace benchmarker
             {
                 Run =
                 {
-                    MinWarmupIterationCount = 10,
-                    LaunchCount = 5, 
-                    IterationTime = TimeInterval.Millisecond * 1000
+                    LaunchCount = 5,
+                    UnrollFactor = 5
                 },
                 Accuracy =
                 {
                     MaxRelativeError = 0.001,
-                    MinInvokeCount = 5
+                    MinIterationTime = TimeInterval.Millisecond * 500
                 },
-            });
+            }); ;
             AddDiagnoser(MemoryDiagnoser.Default);
             AddExporter(RPlotExporter.Default);
         }
