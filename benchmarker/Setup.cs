@@ -5,8 +5,8 @@ using sorting_algorithms;
 
 namespace benchmarker
 {
+    [SimpleJob(runStrategy: RunStrategy.Throughput, invocationCount: 5)]
     [MemoryDiagnoser]
-    [SimpleJob(runStrategy: RunStrategy.Throughput, invocationCount: 512)]
     [CsvExporter, RPlotExporter]
     public class Setup
     {
@@ -18,8 +18,9 @@ namespace benchmarker
             //localTestArray = ArraySamples.GetSample1();
         }
 
-        [Params(1, 10, 100, 1000, 10000, 100000, 1000000)]
-        //[Params(1,10,100)]
+        //[Params(1, 10, 100, 1000, 10000, 100000, 1000000)]
+        //[Params(1, 10, 100)]
+        [Params(100000)]
         public int ArraySize { get; set; }
 
         [IterationSetup]
@@ -33,39 +34,27 @@ namespace benchmarker
             return ArraySamples.GetSample1();
         }
 
-        [Benchmark(Baseline = true)]
+        //[Benchmark(Baseline = true)]
         public void RunBubbleSort1()
         {
-            //var testArray = GetSampleArray();
-
-            //var testArray = localTestArray;
             BubbleSort.Sort1(localTestArray);
         }
 
-        [Benchmark]
+        //[Benchmark]
         public void RunBubbleSort2()
         {
-            //var testArray = GetSampleArray();
-
-            //var testArray = localTestArray;
             BubbleSort.Sort2(localTestArray);
         }
 
-        [Benchmark]
+        //[Benchmark]
         public void RunBubbleSort3()
         {
-            //var testArray = GetSampleArray();
-
-            //var testArray = localTestArray;
             BubbleSort.Sort3(localTestArray);
         }
 
         [Benchmark]
         public void RunQuickSort1()
         {
-            //var testArray = GetSampleArray();
-
-            //var testArray = localTestArray;
             QuickSort.Sort1(localTestArray);
         }
 
