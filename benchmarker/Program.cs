@@ -6,7 +6,7 @@ namespace benchmarker
     {
         static void Main(string[] args)
         {
-            var results = BenchmarkRunner.Run<Setup>();
+            _ = BenchmarkRunner.Run<Setup>();
         }
     }
 }
