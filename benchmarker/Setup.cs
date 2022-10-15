@@ -1,17 +1,18 @@
 ﻿using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Order;
 
 using sorting_algorithms;
 
 namespace benchmarker
 {
     [Config(typeof(Config))]
+    [Orderer(SummaryOrderPolicy.FastestToSlowest, MethodOrderPolicy.Declared)]
     public class Setup
     {
         private int[] localTestArray;
 
         //[Params(1, 10, 100, 1000, 10000, 100000, 1000000)]
-        //[Params(1, 10, 100)]
-        [Params(1000)]
+        [Params(100000)]
         public int ArraySize { get; set; }
 
         [IterationSetup]

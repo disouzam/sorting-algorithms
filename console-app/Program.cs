@@ -15,7 +15,7 @@ namespace consoleapp
             Console.WriteLine("Demonstration of sorting algorithms.");
             long startTime;
             long endTime;
-            int arraySize = 1000000;
+            int arraySize = 100000;
             var randomGenerator = new System.Random();
             var seed = randomGenerator.Next(arraySize);
 
