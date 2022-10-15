@@ -15,7 +15,7 @@ namespace consoleapp
             Console.WriteLine("Demonstration of sorting algorithms.");
             long startTime;
             long endTime;
-            int arraySize = 100000;
+            int arraySize = 1000000;
             var randomGenerator = new System.Random();
             var seed = randomGenerator.Next(arraySize);
 
@@ -27,7 +27,7 @@ namespace consoleapp
             QuickSort.Sort1(testArray);
             endTime = DateTime.Now.Ticks;
 
-            Console.WriteLine($"{nameof(QuickSort)}.{nameof(QuickSort.Sort1)} took {TimeSpan.FromTicks(endTime-startTime).TotalSeconds} seconds to sort an array with {arraySize} elements.");
+            Console.WriteLine($"{nameof(QuickSort)}.{nameof(QuickSort.Sort1)} took {TimeSpan.FromTicks(endTime-startTime).TotalSeconds:F4} seconds to sort an array with {arraySize} elements.");
             PrintArray(testArray);
 
             Console.WriteLine($"Is {nameof(testArray)} sorted by {nameof(QuickSort)}.{nameof(QuickSort.Sort1)}?");
@@ -40,7 +40,7 @@ namespace consoleapp
             BubbleSort.Sort3(testArray);
             endTime = DateTime.Now.Ticks;
 
-            Console.WriteLine($"{nameof(BubbleSort)}.{nameof(BubbleSort.Sort3)} took {TimeSpan.FromTicks(endTime-startTime).TotalSeconds} seconds to sort an array with {arraySize} elements.");
+            Console.WriteLine($"{nameof(BubbleSort)}.{nameof(BubbleSort.Sort3)} took {TimeSpan.FromTicks(endTime-startTime).TotalSeconds:F4} seconds to sort an array with {arraySize} elements.");
             PrintArray(testArray);
 
             Console.WriteLine($"Is {nameof(testArray)} sorted by {nameof(BubbleSort)}.{nameof(BubbleSort.Sort3)}?");
@@ -53,7 +53,7 @@ namespace consoleapp
             BubbleSort.Sort2(testArray);
             endTime = DateTime.Now.Ticks;
 
-            Console.WriteLine($"{nameof(BubbleSort)}.{nameof(BubbleSort.Sort2)} took {TimeSpan.FromTicks(endTime-startTime).TotalSeconds} seconds to sort an array with {arraySize} elements.");
+            Console.WriteLine($"{nameof(BubbleSort)}.{nameof(BubbleSort.Sort2)} took {TimeSpan.FromTicks(endTime-startTime).TotalSeconds:F4} seconds to sort an array with {arraySize} elements.");
             PrintArray(testArray);
 
             Console.WriteLine($"Is {nameof(testArray)} sorted by {nameof(BubbleSort)}.{nameof(BubbleSort.Sort2)}?");
@@ -66,7 +66,7 @@ namespace consoleapp
             BubbleSort.Sort1(testArray);
             endTime = DateTime.Now.Ticks;
 
-            Console.WriteLine($"{nameof(BubbleSort)}.{nameof(BubbleSort.Sort1)} took {TimeSpan.FromTicks(endTime-startTime).TotalSeconds} seconds to sort an array with {arraySize} elements.");
+            Console.WriteLine($"{nameof(BubbleSort)}.{nameof(BubbleSort.Sort1)} took {TimeSpan.FromTicks(endTime-startTime).TotalSeconds:F4} seconds to sort an array with {arraySize} elements.");
             PrintArray(testArray);
 
             Console.WriteLine($"Is {nameof(testArray)} sorted by {nameof(BubbleSort)}.{nameof(BubbleSort.Sort1)}?");
