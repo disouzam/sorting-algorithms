@@ -21,29 +21,16 @@ namespace consoleapp
 
             int[] testArray;
 
-            // BubbleSort > Sort 1
+            // QuickSort > Sort 1
             testArray = ArrayFactory.GetRandomArray(arraySize, seed);
             startTime = DateTime.Now.Ticks;
-            BubbleSort.Sort1(testArray);
+            QuickSort.Sort1(testArray);
             endTime = DateTime.Now.Ticks;
 
-            Console.WriteLine($"{nameof(BubbleSort)}.{nameof(BubbleSort.Sort1)} took {TimeSpan.FromTicks(endTime-startTime).TotalSeconds} to sort an array with {arraySize} elements.");
+            Console.WriteLine($"{nameof(QuickSort)}.{nameof(QuickSort.Sort1)} took {TimeSpan.FromTicks(endTime-startTime).TotalSeconds} to sort an array with {arraySize} elements.");
             PrintArray(testArray);
 
-            Console.WriteLine($"Is {nameof(testArray)} sorted by {nameof(BubbleSort)}.{nameof(BubbleSort.Sort1)}?");
-            Console.WriteLine(SortingAssessment.IsSorted(testArray));
-            Console.WriteLine();
-
-            // BubbleSort > Sort 2
-            testArray = ArrayFactory.GetRandomArray(arraySize, seed);
-            startTime = DateTime.Now.Ticks;
-            BubbleSort.Sort2(testArray);
-            endTime = DateTime.Now.Ticks;
-
-            Console.WriteLine($"{nameof(BubbleSort)}.{nameof(BubbleSort.Sort2)} took {TimeSpan.FromTicks(endTime-startTime).TotalSeconds} to sort an array with {arraySize} elements.");
-            PrintArray(testArray);
-
-            Console.WriteLine($"Is {nameof(testArray)} sorted by {nameof(BubbleSort)}.{nameof(BubbleSort.Sort2)}?");
+            Console.WriteLine($"Is {nameof(testArray)} sorted by {nameof(QuickSort)}.{nameof(QuickSort.Sort1)}?");
             Console.WriteLine(SortingAssessment.IsSorted(testArray));
             Console.WriteLine();
 
@@ -60,18 +47,31 @@ namespace consoleapp
             Console.WriteLine(SortingAssessment.IsSorted(testArray));
             Console.WriteLine();
 
+            // BubbleSort > Sort 2
             testArray = ArrayFactory.GetRandomArray(arraySize, seed);
             startTime = DateTime.Now.Ticks;
-            QuickSort.Sort1(testArray);
+            BubbleSort.Sort2(testArray);
             endTime = DateTime.Now.Ticks;
 
-            Console.WriteLine($"{nameof(QuickSort)}.{nameof(QuickSort.Sort1)} took {TimeSpan.FromTicks(endTime-startTime).TotalSeconds} to sort an array with {arraySize} elements.");
+            Console.WriteLine($"{nameof(BubbleSort)}.{nameof(BubbleSort.Sort2)} took {TimeSpan.FromTicks(endTime-startTime).TotalSeconds} to sort an array with {arraySize} elements.");
             PrintArray(testArray);
 
-            Console.WriteLine($"Is {nameof(testArray)} sorted by {nameof(QuickSort)}.{nameof(QuickSort.Sort1)}?");
+            Console.WriteLine($"Is {nameof(testArray)} sorted by {nameof(BubbleSort)}.{nameof(BubbleSort.Sort2)}?");
             Console.WriteLine(SortingAssessment.IsSorted(testArray));
             Console.WriteLine();
 
+            // BubbleSort > Sort 1
+            testArray = ArrayFactory.GetRandomArray(arraySize, seed);
+            startTime = DateTime.Now.Ticks;
+            BubbleSort.Sort1(testArray);
+            endTime = DateTime.Now.Ticks;
+
+            Console.WriteLine($"{nameof(BubbleSort)}.{nameof(BubbleSort.Sort1)} took {TimeSpan.FromTicks(endTime-startTime).TotalSeconds} to sort an array with {arraySize} elements.");
+            PrintArray(testArray);
+
+            Console.WriteLine($"Is {nameof(testArray)} sorted by {nameof(BubbleSort)}.{nameof(BubbleSort.Sort1)}?");
+            Console.WriteLine(SortingAssessment.IsSorted(testArray));
+            Console.WriteLine();
         }
 
         internal static void PrintArray(int[] array)
