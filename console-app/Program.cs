@@ -1,8 +1,6 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Text;
-
-using Microsoft.VisualBasic;
 
 using sorting_algorithms;
 
@@ -76,12 +74,12 @@ namespace consoleapp
 
         internal static void PrintArray(int[] array)
         {
-            var year = DateAndTime.Now.Year;
-            var month = DateAndTime.Now.Month;
-            var day = DateAndTime.Now.Day;
-            var hour = DateAndTime.Now.Hour;
-            var minute = DateAndTime.Now.Minute;
-            var second = DateAndTime.Now.Second;
+            var year = DateTime.Now.Year;
+            var month = DateTime.Now.Month;
+            var day = DateTime.Now.Day;
+            var hour = DateTime.Now.Hour;
+            var minute = DateTime.Now.Minute;
+            var second = DateTime.Now.Second;
             var filePath = $"{Directory.GetCurrentDirectory()}\\arrayValue-{year}-{month}-{day}-{hour}-{minute}-{second}.txt";
 
             var stringBuilder = new StringBuilder();
